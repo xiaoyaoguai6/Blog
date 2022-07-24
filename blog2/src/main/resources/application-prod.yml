@@ -1,0 +1,47 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: blog-admin
+  mvc:
+    servlet:
+      path: /api
+
+  #数据库的配置
+  # datasource
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.18.0.5:3306/blog2?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: liu147258963
+
+  servlet:
+    multipart:
+      max-request-size: 20MB
+      max-file-size: 2MB
+  redis:
+    port: 6379
+    host: 172.18.0.3
+    password: redis123...
+    database: 1
+
+
+
+#mybatis-plus
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      table-prefix: ms_
+  mapper-locations: classpath:com/liu/blog2/mapper/xml/*.xml
+
+
+qiniu:
+  accessKey: 0PDOWKTwQBQ9zXY9cXyR3stpQKDL-JQGyMr0D6M1
+  accessSecretKey: ZbSpja7nGTf5yrgrxML0cwn1iHMhpyFMNBpS9ok2
+
+rocketmq:
+  producer:
+    group: blog_group
+  name-server: 120.76.47.181:9876
