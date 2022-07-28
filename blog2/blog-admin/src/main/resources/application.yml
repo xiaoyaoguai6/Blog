@@ -8,9 +8,9 @@ spring:
   # datasource
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://120.76.47.181:3388/blog2?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=true
+    url: jdbc:mysql://*******?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=true
     username: root
-    password: liu147258963
+    password: ****
 
 #mybatis-plus
 mybatis-plus:
